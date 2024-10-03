@@ -2,11 +2,11 @@
 
 <#
 .SYNOPSIS
-Runs the WA Lotto process by loading necessary modules, retrieving past lottery draw data, displaying results, and saving them to a text file.
+Is the WA Lotto main process by loading necessary modules, retrieving past lottery draw data, displaying results, and saving them to a text file.
 
 .DESCRIPTION
-The `Run-WALotto` function is designed to automate the workflow for managing and analyzing Western Australian Lottery (WA Lotto) results. It imports custom modules for lottery calculations, retrieves past drawing data, displays results on the console, and saves them to a text file.
-
+The `Run-WALotto` function is designed to automate the workflow for managing and analyzing the Washington State Lotto(WA Lotto) 6/49 game results. 
+It imports custom modules for lottery calculations, retrieves past drawing data, displays results on the console, and saves them to a text file.
 This function utilizes other functions such as `Get-WALottoNums`, `Display-DrawTable`, `Display-DrawCalc`, and `Send-ToTextFile` to complete the process.
 
 .PARAMETER None
@@ -31,8 +31,8 @@ This example runs the WA Lotto automation process. It retrieves the past draw da
 
 
     #----- Path & File Setups -----
-    $modpath = "D:\My_Computer\My_Computer_Automation\Powershell\WALotto\Modules\"
-    $outFilePath = "D:\My_Computer\My_Computer_Automation\Powershell\WALotto\Data\"
+    $modpath = "C:\yourlocalpath\PS\Modules\"
+    $outFilePath = "C:\yourlocalpath\PS\Data\"
 
     #----- Add Modules -----
     $modmath = Join-Path -Path $modpath -ChildPath "WALottoMath.psm1"
@@ -60,7 +60,7 @@ This example runs the WA Lotto automation process. It retrieves the past draw da
     # Save results to text file
     Send-ToTextFile -drawnums $draws -path $outFilePath
 }
-
+Cls
 Run-WALotto
 
 
